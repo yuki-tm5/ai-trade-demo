@@ -4,18 +4,20 @@ import streamlit as st
 ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT/'src'))
 from ask_find import ask,config,resolve_file
 from workspace_ops import initial,parse_events,ingest,change
-from workspace_store import Store,BackendError,Conflict
+from workspace_store import Store,BackendError,Conflict,public_config
 st.set_page_config(page_title='AI Trade · Operations Workspace',layout='wide')
 st.title('AI Trade Operations · 规则检索 Demo')
 st.caption('Demo Data · 完全虚构 · 无真实QQ/微信连接 · 无AI语义理解')
 try:settings=dict(st.secrets)
 except Exception:settings={}
-configured=bool(settings.get('SUPABASE_URL') and settings.get('SUPABASE_ANON_KEY'))
+try:credentials=public_config(settings)
+except BackendError as e:st.error(str(e));credentials=None
+configured=credentials is not None
 store=None;can_write=False;version=0;state=ingest(initial(),parse_events(ROOT/'workspace_fixtures',0))
 if configured:
  if st.session_state.get('access_token'):
   st.session_state.pop('login_password',None)
-  store=Store(settings['SUPABASE_URL'],settings['SUPABASE_ANON_KEY'],st.session_state['access_token'])
+  store=Store(*credentials,token=st.session_state['access_token'])
   try:
    version,state=store.load();seeded=ingest(state,parse_events(ROOT/'workspace_fixtures',state['simulation_stage']))
    if seeded!=state:version=store.save(version,seeded);state=seeded
@@ -26,7 +28,7 @@ if configured:
   with st.sidebar.form('login'):
    email=st.text_input('测试者邮箱',key='login_email');password=st.text_input('测试者密码',type='password',key='login_password')
    if st.form_submit_button('登录独立工作区'):
-    try:st.session_state['access_token']=Store(settings['SUPABASE_URL'],settings['SUPABASE_ANON_KEY']).login(email,password);st.rerun()
+    try:st.session_state['access_token']=Store(*credentials).login(email,password);st.rerun()
     except BackendError as e:st.error(str(e))
   st.info('登录后使用数据库持久化个人任务；未登录只能查看虚构预览。')
 else:st.warning('数据库尚未授权配置：当前为只读预览，任务写入与模拟更新已禁用。请按 deployment/SETUP.md 配置 Supabase 后再开展真实用户任务测试。')

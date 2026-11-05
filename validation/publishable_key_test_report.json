@@ -1,0 +1,48 @@
+{
+  "passed": 10,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "new_secrets_variable_only",
+      "passed": true
+    },
+    {
+      "name": "new_environment_variable",
+      "passed": true
+    },
+    {
+      "name": "new_variable_precedes_old",
+      "passed": true
+    },
+    {
+      "name": "legacy_fallback",
+      "passed": true
+    },
+    {
+      "name": "missing_config_fails_closed",
+      "passed": true
+    },
+    {
+      "name": "secret_rejected",
+      "passed": true
+    },
+    {
+      "name": "legacy_service_role_rejected",
+      "passed": true
+    },
+    {
+      "name": "publishable_in_apikey_not_bearer",
+      "passed": true
+    },
+    {
+      "name": "user_jwt_in_authorization",
+      "passed": true
+    },
+    {
+      "name": "new_variable_enables_login_without_sdk",
+      "passed": true
+    }
+  ],
+  "supabase_python_sdk_used": false,
+  "live_database_authentication_verified": false
+}

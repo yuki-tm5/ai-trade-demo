@@ -1,0 +1,388 @@
+{
+  "initial": {
+    "tasks": {
+      "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332": {
+        "id": "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332",
+        "project": "ZZ81001",
+        "item_type": "order_confirmation",
+        "title": "建议核实订单状态；已发送报价不代表获得订单",
+        "status": "suggested",
+        "notes": "",
+        "completed_at": null,
+        "sources": [
+          "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:11.707460+00:00",
+        "updated_at": "2026-11-05T12:41:11.707460+00:00",
+        "confirmation_status": "waiting_confirmation"
+      },
+      "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713": {
+        "id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "project": "ZZ81002",
+        "item_type": "delivery_confirmation",
+        "title": "联系供应商核对材料预计交期",
+        "status": "suggested",
+        "notes": "",
+        "completed_at": null,
+        "sources": [
+          "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:11.707460+00:00",
+        "updated_at": "2026-11-05T12:41:11.707460+00:00",
+        "confirmation_status": "waiting_confirmation"
+      },
+      "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde": {
+        "id": "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde",
+        "project": "ZZ81004",
+        "item_type": "drawing_confirmation",
+        "title": "建议核实图纸生产批准证据",
+        "status": "suggested",
+        "notes": "",
+        "completed_at": null,
+        "sources": [
+          "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:11.707460+00:00",
+        "updated_at": "2026-11-05T12:41:11.707460+00:00",
+        "confirmation_status": "waiting_confirmation"
+      }
+    },
+    "events": {
+      "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916": {
+        "id": "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916",
+        "project": "ZZ81001",
+        "item_type": "order_confirmation",
+        "observation": "邮件明确表述报价已发送，订单确认待核实",
+        "suggestion": "建议核实订单状态；已发送报价不代表获得订单",
+        "source_email_id": "<a_quote@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n报价已发送，尚未收到正式订单确认。",
+        "subject": "ZZ81001 业务更新",
+        "event_time": "Sun, 01 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-01",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [],
+        "source_file": "a_quote.eml"
+      },
+      "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44": {
+        "id": "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44",
+        "project": "ZZ81002",
+        "item_type": "delivery_confirmation",
+        "observation": "邮件记录预计交货日期，不代表承诺或到货",
+        "suggestion": "联系供应商核对材料预计交期",
+        "source_email_id": "<b_date@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n材料预计交货日期：2026-11-10；待供应商确认。",
+        "subject": "ZZ81002 业务更新",
+        "event_time": "Sun, 01 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-01",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [
+          "2026-11-10"
+        ],
+        "source_file": "b_date.eml"
+      },
+      "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa": {
+        "id": "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa",
+        "project": "ZZ81004",
+        "item_type": "drawing_confirmation",
+        "observation": "邮件表述候选工厂资格通过，图纸批准待确认",
+        "suggestion": "建议核实图纸生产批准证据",
+        "source_email_id": "<c_review@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n候选工厂审核通过，图纸尚未批准。",
+        "subject": "ZZ81004 业务更新",
+        "event_time": "Mon, 02 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-02",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [],
+        "source_file": "c_review.eml"
+      }
+    },
+    "history": [
+      {
+        "id": "f0c252df6cd44e93a8a46dca6120081f",
+        "time": "2026-11-05T12:41:11.707460+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332",
+        "event_id": "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916"
+      },
+      {
+        "id": "fd4569fc0db444c38f97b44e0f49bdc8",
+        "time": "2026-11-05T12:41:11.707460+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "event_id": "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+      },
+      {
+        "id": "035cd70fee5142d6a38d15f47ff249f2",
+        "time": "2026-11-05T12:41:11.707460+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde",
+        "event_id": "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa"
+      }
+    ],
+    "simulation_stage": 0
+  },
+  "after_simulation": {
+    "tasks": {
+      "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332": {
+        "id": "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332",
+        "project": "ZZ81001",
+        "item_type": "order_confirmation",
+        "title": "建议核实订单状态；已发送报价不代表获得订单",
+        "status": "suggested",
+        "notes": "",
+        "completed_at": null,
+        "sources": [
+          "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916",
+          "d62824e0bccc9fd8084f39bf109ec09922a00b8a42df16102172191a0f721abf"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:08.242201+00:00",
+        "updated_at": "2026-11-05T12:41:08.258202+00:00",
+        "confirmation_status": "waiting_confirmation"
+      },
+      "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713": {
+        "id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "project": "ZZ81002",
+        "item_type": "delivery_confirmation",
+        "title": "联系供应商核对材料预计交期",
+        "status": "done",
+        "notes": "已联系工厂，等待书面核实",
+        "completed_at": "2026-11-05T12:41:08.247201+00:00",
+        "sources": [
+          "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44",
+          "03856255875457f8eca7fa54412874a114cfcc3b25a20fa1512b059ef9a3e8bf"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:08.242201+00:00",
+        "updated_at": "2026-11-05T12:41:08.257202+00:00",
+        "confirmation_status": "conflicting_evidence"
+      },
+      "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde": {
+        "id": "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde",
+        "project": "ZZ81004",
+        "item_type": "drawing_confirmation",
+        "title": "建议核实图纸生产批准证据",
+        "status": "suggested",
+        "notes": "",
+        "completed_at": null,
+        "sources": [
+          "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa"
+        ],
+        "origin": "system_suggestion",
+        "created_at": "2026-11-05T12:41:08.242201+00:00",
+        "updated_at": "2026-11-05T12:41:08.242201+00:00",
+        "confirmation_status": "waiting_confirmation"
+      }
+    },
+    "events": {
+      "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916": {
+        "id": "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916",
+        "project": "ZZ81001",
+        "item_type": "order_confirmation",
+        "observation": "邮件明确表述报价已发送，订单确认待核实",
+        "suggestion": "建议核实订单状态；已发送报价不代表获得订单",
+        "source_email_id": "<a_quote@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n报价已发送，尚未收到正式订单确认。",
+        "subject": "ZZ81001 业务更新",
+        "event_time": "Sun, 01 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-01",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [],
+        "source_file": "a_quote.eml"
+      },
+      "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44": {
+        "id": "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44",
+        "project": "ZZ81002",
+        "item_type": "delivery_confirmation",
+        "observation": "邮件记录预计交货日期，不代表承诺或到货",
+        "suggestion": "联系供应商核对材料预计交期",
+        "source_email_id": "<b_date@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n材料预计交货日期：2026-11-10；待供应商确认。",
+        "subject": "ZZ81002 业务更新",
+        "event_time": "Sun, 01 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-01",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [
+          "2026-11-10"
+        ],
+        "source_file": "b_date.eml"
+      },
+      "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa": {
+        "id": "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa",
+        "project": "ZZ81004",
+        "item_type": "drawing_confirmation",
+        "observation": "邮件表述候选工厂资格通过，图纸批准待确认",
+        "suggestion": "建议核实图纸生产批准证据",
+        "source_email_id": "<c_review@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n候选工厂审核通过，图纸尚未批准。",
+        "subject": "ZZ81004 业务更新",
+        "event_time": "Mon, 02 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-02",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [],
+        "source_file": "c_review.eml"
+      },
+      "03856255875457f8eca7fa54412874a114cfcc3b25a20fa1512b059ef9a3e8bf": {
+        "id": "03856255875457f8eca7fa54412874a114cfcc3b25a20fa1512b059ef9a3e8bf",
+        "project": "ZZ81002",
+        "item_type": "delivery_confirmation",
+        "observation": "邮件记录预计交货日期，不代表承诺或到货",
+        "suggestion": "联系供应商核对材料预计交期",
+        "source_email_id": "<b_date_new@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n材料预计交货日期：2026-11-14；待供应商确认。",
+        "subject": "ZZ81002 业务更新",
+        "event_time": "Wed, 04 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-04",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [
+          "2026-11-14"
+        ],
+        "source_file": "b_date_new.eml"
+      },
+      "d62824e0bccc9fd8084f39bf109ec09922a00b8a42df16102172191a0f721abf": {
+        "id": "d62824e0bccc9fd8084f39bf109ec09922a00b8a42df16102172191a0f721abf",
+        "project": "ZZ81001",
+        "item_type": "order_confirmation",
+        "observation": "邮件明确表述报价已发送，订单确认待核实",
+        "suggestion": "建议核实订单状态；已发送报价不代表获得订单",
+        "source_email_id": "<a_quote_forward@workspace.invalid>",
+        "evidence": "Demo Data / 完全虚构\n报价已发送，尚未收到正式订单确认。",
+        "subject": "ZZ81001 业务更新",
+        "event_time": "Wed, 04 Nov 2026 10:00:00 +0800",
+        "simulation_date": "2026-11-04",
+        "confirmation_status": "waiting_confirmation",
+        "classification": "explicit_mail_statement_not_external_confirmation",
+        "recorded_dates": [],
+        "source_file": "a_quote_forward.eml"
+      }
+    },
+    "history": [
+      {
+        "id": "b85ff2e60fb844d58b0c3223855025be",
+        "time": "2026-11-05T12:41:08.242201+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332",
+        "event_id": "e0cdae04836580a405fd97ddb446822ffc08d7597e0fa5062ec1cd0836f68916"
+      },
+      {
+        "id": "a4c5cd390b5349c3b51405c1626ced54",
+        "time": "2026-11-05T12:41:08.242201+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "event_id": "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+      },
+      {
+        "id": "d7c67dab0a65471097c837254d43acba",
+        "time": "2026-11-05T12:41:08.242201+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "cfbfe48529544fc475874ed2e321393735252ea3ab0c0f299caa338409dd6cde",
+        "event_id": "e02cf21b4adf9456db3a6edc3e786a6741ccba2d05d678278630291c9cfd2afa"
+      },
+      {
+        "id": "f9bcbd3493924e9483433fab3d31ecb2",
+        "time": "2026-11-05T12:41:08.247201+00:00",
+        "actor": "user",
+        "action": "confirm",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "before": {
+          "id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+          "project": "ZZ81002",
+          "item_type": "delivery_confirmation",
+          "title": "联系供应商核对材料预计交期",
+          "status": "suggested",
+          "notes": "",
+          "completed_at": null,
+          "sources": [
+            "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+          ],
+          "origin": "system_suggestion",
+          "created_at": "2026-11-05T12:41:08.242201+00:00",
+          "updated_at": "2026-11-05T12:41:08.242201+00:00",
+          "confirmation_status": "waiting_confirmation"
+        },
+        "classification": "user_task_operation_not_business_event"
+      },
+      {
+        "id": "0f300640db2c427992391995da5147a1",
+        "time": "2026-11-05T12:41:08.247201+00:00",
+        "actor": "user",
+        "action": "notes",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "before": {
+          "id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+          "project": "ZZ81002",
+          "item_type": "delivery_confirmation",
+          "title": "联系供应商核对材料预计交期",
+          "status": "todo",
+          "notes": "",
+          "completed_at": null,
+          "sources": [
+            "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+          ],
+          "origin": "system_suggestion",
+          "created_at": "2026-11-05T12:41:08.242201+00:00",
+          "updated_at": "2026-11-05T12:41:08.242201+00:00",
+          "confirmation_status": "waiting_confirmation"
+        },
+        "classification": "user_task_operation_not_business_event"
+      },
+      {
+        "id": "d6d124450f5642f8ad90dd83bc110d6b",
+        "time": "2026-11-05T12:41:08.247201+00:00",
+        "actor": "user",
+        "action": "done",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "before": {
+          "id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+          "project": "ZZ81002",
+          "item_type": "delivery_confirmation",
+          "title": "联系供应商核对材料预计交期",
+          "status": "todo",
+          "notes": "已联系工厂，等待书面核实",
+          "completed_at": null,
+          "sources": [
+            "816f581e33ab0dd99aa308737031aba6aeab4f239e74626226039106f61afa44"
+          ],
+          "origin": "system_suggestion",
+          "created_at": "2026-11-05T12:41:08.242201+00:00",
+          "updated_at": "2026-11-05T12:41:08.242201+00:00",
+          "confirmation_status": "waiting_confirmation"
+        },
+        "classification": "user_task_operation_not_business_event"
+      },
+      {
+        "id": "680ba1129f734f61b2ef67ea99df90e1",
+        "time": "2026-11-05T12:41:08.258202+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "9771af32689c26f8935b322b831a436829e18d2976a758d0a360f0e87fca7713",
+        "event_id": "03856255875457f8eca7fa54412874a114cfcc3b25a20fa1512b059ef9a3e8bf"
+      },
+      {
+        "id": "58eeb19780404bafb568d7422640d8fe",
+        "time": "2026-11-05T12:41:08.258202+00:00",
+        "actor": "system",
+        "action": "evidence_added",
+        "task_id": "525cbdc3e2f811aa220041db8d30c56e4b1d6ae7eec208b04509c20ac55d2332",
+        "event_id": "d62824e0bccc9fd8084f39bf109ec09922a00b8a42df16102172191a0f721abf"
+      }
+    ],
+    "simulation_stage": 1
+  }
+}
