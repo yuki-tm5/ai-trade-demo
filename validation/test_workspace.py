@@ -52,11 +52,19 @@ with patch('workspace_store.requests.request',fake):
  try:s.save(0,initial());ok=False
  except Conflict:ok=True
  check('stale_version_cannot_overwrite',ok and s.load()[1]==b)
+captured=[]
+def login_fake(method,url,headers,timeout,**kw):
+ captured.append(headers);return Response({'access_token':'fake-token'})
+with patch('workspace_store.requests.request',login_fake):
+ check('publishable_key_not_used_as_user_bearer',Store('https://example.supabase.co','sb_publishable_fake').login('fictional@example.invalid','fake-password')=='fake-token' and 'Authorization' not in captured[0])
+try:Store('https://example.supabase.co','sb_secret_fake');blocked=False
+except Exception:blocked=True
+check('privileged_key_rejected',blocked)
 app=AppTest.from_file(str(R/'app.py')).run(timeout=45);check('workspace_default_page_renders',not app.exception and any('Morning Workspace'==h.value for h in app.header))
 check('writes_disabled_without_secrets',all(b.disabled for b in app.button if b.label in ('确认建议','完成跟进','不适用','保存备注','撤销上次操作','保存个人任务','模拟收到新邮件 · Demo 日期 2026-11-04')))
 next(b for b in app.button if b.label=='Ask & Find').click().run(timeout=45);check('find_page_renders',not app.exception)
 next(b for b in app.button if b.label=='查询').click().run(timeout=45);check('find_search_and_download',not app.exception and len(app.get('download_button'))>=1)
 check('no_raw_json_user_interface',len(app.get('json'))==0)
 report=dict(passed=sum(t['passed'] for t in tests),failed=sum(not t['passed'] for t in tests),tests=tests,reminder_accuracy=dict(expected=len(expected),correct=len(expected&actual),omitted=len(expected-actual),false_positive=len(actual-expected),duplicate=len(a['tasks'])-len(actual),unfounded_state_judgments=0),live_supabase_persistence_verified=False,live_two_user_RLS_verified=False,cloud_reboot_persistence_verified=False)
-(R/'validation/final_workspace_actual_events.json').write_text(json.dumps(dict(initial=ingest(initial(),parse_events(R/'workspace_fixtures',0)),after_simulation=b),ensure_ascii=False,indent=2),encoding='utf-8')
-(R/'validation/final_workspace_test_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report,ensure_ascii=True));raise SystemExit(bool(report['failed']))
+(R/'validation/latest_workspace_actual_events.json').write_text(json.dumps(dict(initial=ingest(initial(),parse_events(R/'workspace_fixtures',0)),after_simulation=b),ensure_ascii=False,indent=2),encoding='utf-8')
+(R/'validation/latest_workspace_test_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report,ensure_ascii=True));raise SystemExit(bool(report['failed']))
