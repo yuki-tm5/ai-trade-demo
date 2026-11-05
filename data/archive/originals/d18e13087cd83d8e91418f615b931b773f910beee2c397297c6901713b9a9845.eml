@@ -1,0 +1,37 @@
+From: fictional-supplier@example.invalid
+To: fictional-trader@example.invalid
+Subject: =?utf-8?b?5bel56iL6LWE5paZ?=
+Date: Wed, 04 Nov 2026 10:00:00 +0800
+Message-ID: <deny@t08.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5998387925173016871=="
+
+--===============5998387925173016871==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+完全虚构的T08集成样本。
+产品 GV82001 与本附件无关。
+
+--===============5998387925173016871==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''GVY82001-00_%E5%B7%A5%E7%A8%8B%E5%9B%BE_V1.pdf
+MIME-Version: 1.0
+
+JVBERi0xLjMKJeLjz9MKMSAwIG9iago8PAovUHJvZHVjZXIgKHB5cGRmKQo+PgplbmRvYmoKMiAw
+IG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWyA0IDAgUiBdCj4+CmVuZG9iagoz
+IDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgo+PgplbmRvYmoKNCAwIG9iago8
+PAovVHlwZSAvUGFnZQovUmVzb3VyY2VzIDw8Ci9Gb250IDw8Ci9GMSA1IDAgUgo+Pgo+PgovTWVk
+aWFCb3ggWyAwLjAgMC4wIDYwMCA4MDAgXQovUGFyZW50IDIgMCBSCi9Db250ZW50cyA2IDAgUgo+
+PgplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250
+IC9IZWx2ZXRpY2EKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0xlbmd0aCA2Mgo+PgpzdHJlYW0KQlQg
+L0YxIDEwIFRmIDQwIDc0MCBUZCAxNSBUTCAoUHJvZHVjdCBNb2RlbDogR1Y4MjAwMSkgVGogVCog
+RVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAw
+MTUgMDAwMDAgbiAKMDAwMDAwMDA1NCAwMDAwMCBuIAowMDAwMDAwMTEzIDAwMDAwIG4gCjAwMDAw
+MDAxNjIgMDAwMDAgbiAKMDAwMDAwMDI5NCAwMDAwMCBuIAowMDAwMDAwMzY0IDAwMDAwIG4gCnRy
+YWlsZXIKPDwKL1NpemUgNwovUm9vdCAzIDAgUgovSW5mbyAxIDAgUgo+PgpzdGFydHhyZWYKNDc2
+CiUlRU9GCg==
+
+--===============5998387925173016871==--

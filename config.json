@@ -1,0 +1,9 @@
+{
+  "catalog": "data/catalog.sqlite3",
+  "datasets": {
+    "supplementary": {
+      "archive_root": "data/archive",
+      "content_index": "data/content.sqlite3"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "total_emails": 13,
+  "inbox": 13,
+  "sent": 0,
+  "attachment_occurrences": 13,
+  "unique_attachment_hashes": 12,
+  "scanned": 13,
+  "imported": 13,
+  "skipped": 0,
+  "failures": 0,
+  "error_types": {},
+  "errors": [],
+  "warning_types": {},
+  "warnings": []
+}

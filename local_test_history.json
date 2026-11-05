@@ -1,0 +1,5 @@
+{
+  "setup_issue": "First UI attempt ran before Streamlit installation completed; later UI test passed",
+  "scan_issue": "Initial deployment-text path scan mistook https:// as a drive prefix; corrected to require identifier boundary",
+  "online_test": "Not performed; repository and cloud account session pending"
+}

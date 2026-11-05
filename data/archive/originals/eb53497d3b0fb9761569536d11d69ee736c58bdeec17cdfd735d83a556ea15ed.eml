@@ -1,0 +1,37 @@
+From: fictional-supplier@example.invalid
+To: fictional-trader@example.invalid
+Subject: =?utf-8?b?5Y6f5Z6L5bel56iL5Zu+6LWE5paZ?=
+Date: Wed, 04 Nov 2026 10:00:00 +0800
+Message-ID: <proto@t08.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3949191172322649018=="
+
+--===============3949191172322649018==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+完全虚构的T08集成样本。
+产品 GV40159F 对应原型 GVY0647-00。未获生产批准。
+
+--===============3949191172322649018==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''GVY0647-00_%E5%B7%A5%E7%A8%8B%E5%9B%BE_V1.pdf
+MIME-Version: 1.0
+
+JVBERi0xLjMKJeLjz9MKMSAwIG9iago8PAovUHJvZHVjZXIgKHB5cGRmKQo+PgplbmRvYmoKMiAw
+IG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWyA0IDAgUiBdCj4+CmVuZG9iagoz
+IDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgo+PgplbmRvYmoKNCAwIG9iago8
+PAovVHlwZSAvUGFnZQovUmVzb3VyY2VzIDw8Ci9Gb250IDw8Ci9GMSA1IDAgUgo+Pgo+PgovTWVk
+aWFCb3ggWyAwLjAgMC4wIDYwMCA4MDAgXQovUGFyZW50IDIgMCBSCi9Db250ZW50cyA2IDAgUgo+
+PgplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250
+IC9IZWx2ZXRpY2EKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0xlbmd0aCA5Ngo+PgpzdHJlYW0KQlQg
+L0YxIDEwIFRmIDQwIDc0MCBUZCAxNSBUTCAoUHJvZHVjdCBNb2RlbDogR1Y0MDE1OUYpIFRqIFQq
+IChQcm90b3R5cGUgSUQ6IEdWWTA2NDctMDApIFRqIFQqIEVUCmVuZHN0cmVhbQplbmRvYmoKeHJl
+ZgowIDcKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNTQg
+MDAwMDAgbiAKMDAwMDAwMDExMyAwMDAwMCBuIAowMDAwMDAwMTYyIDAwMDAwIG4gCjAwMDAwMDAy
+OTQgMDAwMDAgbiAKMDAwMDAwMDM2NCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDcKL1Jvb3Qg
+MyAwIFIKL0luZm8gMSAwIFIKPj4Kc3RhcnR4cmVmCjUxMAolJUVPRgo=
+
+--===============3949191172322649018==--

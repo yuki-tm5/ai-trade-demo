@@ -1,0 +1,38 @@
+From: fictional-supplier@example.invalid
+To: fictional-trader@example.invalid
+Subject: ZZ81008 =?utf-8?b?5Y2V5o2u?=
+Date: Wed, 04 Nov 2026 10:00:00 +0800
+Message-ID: <pdf@t08.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5640882400651619890=="
+
+--===============5640882400651619890==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+完全虚构的T08集成样本。
+单据记录供核对。
+
+--===============5640882400651619890==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="notice.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjMKJeLjz9MKMSAwIG9iago8PAovUHJvZHVjZXIgKHB5cGRmKQo+PgplbmRvYmoKMiAw
+IG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWyA0IDAgUiBdCj4+CmVuZG9iagoz
+IDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgo+PgplbmRvYmoKNCAwIG9iago8
+PAovVHlwZSAvUGFnZQovUmVzb3VyY2VzIDw8Ci9Gb250IDw8Ci9GMSA1IDAgUgo+Pgo+PgovTWVk
+aWFCb3ggWyAwLjAgMC4wIDYwMCA4MDAgXQovUGFyZW50IDIgMCBSCi9Db250ZW50cyA2IDAgUgo+
+PgplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250
+IC9IZWx2ZXRpY2EKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0xlbmd0aCAxNzQKPj4Kc3RyZWFtCkJU
+IC9GMSAxMCBUZiA0MCA3NDAgVGQgMTUgVEwgKFByb2R1Y3QgTW9kZWw6IFpaODEwMDgpIFRqIFQq
+IChQTyBOdW1iZXI6IFBPLUZJQ1QtMDkpIFRqIFQqIChRdWFudGl0eTogMjVwY3MpIFRqIFQqIChB
+bW91bnQ6IDEyNSkgVGogVCogKERvY3VtZW50IFR5cGU6IFB1cmNoYXNlIE9yZGVyKSBUaiBUKiBF
+VAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA3CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAx
+NSAwMDAwMCBuIAowMDAwMDAwMDU0IDAwMDAwIG4gCjAwMDAwMDAxMTMgMDAwMDAgbiAKMDAwMDAw
+MDE2MiAwMDAwMCBuIAowMDAwMDAwMjk0IDAwMDAwIG4gCjAwMDAwMDAzNjQgMDAwMDAgbiAKdHJh
+aWxlcgo8PAovU2l6ZSA3Ci9Sb290IDMgMCBSCi9JbmZvIDEgMCBSCj4+CnN0YXJ0eHJlZgo1ODkK
+JSVFT0YK
+
+--===============5640882400651619890==--

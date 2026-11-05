@@ -1,0 +1,40 @@
+﻿id,source_path,source_folder,source_sha256,message_id,date_raw,date_utc,sender,recipients,subject,body,body_type,in_reply_to,original_path
+73b7beb6ed304e9f4bf03a60de57739aee477313be6f44d962c03026bcaf278a,demo-provenance/bad.eml,inbox,869a3a489b7d94aebe72114730f8137c44c606d3ed91e0cc0200f1a1b85d2f7a,<bad@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81007 采购资料,"完全虚构的T08集成样本。
+无法解析的模拟附件。
+",text/plain,,demo-provenance/73b7beb6ed304e9f4bf03a60de57739aee477313be6f44d962c03026bcaf278a.eml
+d18e13087cd83d8e91418f615b931b773f910beee2c397297c6901713b9a9845,demo-provenance/deny.eml,inbox,3374e19d559fa247c7c3bde21ac33de250f050c2f58069bdedc599b14026c707,<deny@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,工程资料,"完全虚构的T08集成样本。
+产品 GV82001 与本附件无关。
+",text/plain,,demo-provenance/d18e13087cd83d8e91418f615b931b773f910beee2c397297c6901713b9a9845.eml
+f71525e195724e493cbb855a6120ce21bf784a3f16839732f5a9e959dc753a8b,demo-provenance/missing.eml,inbox,41cd0a9aee6f1553e78cc9e181722920dba2d33f4b18d6e125a63862be885ab5,<missing@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81006 采购资料,"完全虚构的T08集成样本。
+缺少数值。
+",text/plain,,demo-provenance/f71525e195724e493cbb855a6120ce21bf784a3f16839732f5a9e959dc753a8b.eml
+32cff501b44fc2ad713b098ce2e58dc22f81aa6bcc0223ee5243a7e72d4ba445,demo-provenance/multi.eml,inbox,9474114b3c4d53693575e5c27fb3c7a9b8ac6375a9b4f0929d949d95ef8b7c1f,<multi@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,多产品报价,"完全虚构的T08集成样本。
+仅供报价讨论。
+",text/plain,,demo-provenance/32cff501b44fc2ad713b098ce2e58dc22f81aa6bcc0223ee5243a7e72d4ba445.eml
+4cef695cb24c0b0f45cb8fd023d0c13154c92bc35f59c3d214d85116ce863108,demo-provenance/pdf.eml,inbox,99841d654587dbe9809411e5e8acf560653aa366fb23dd9fb8712cec2281474a,<pdf@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81008 单据,"完全虚构的T08集成样本。
+单据记录供核对。
+",text/plain,,demo-provenance/4cef695cb24c0b0f45cb8fd023d0c13154c92bc35f59c3d214d85116ce863108.eml
+5a7fda15664fe56c714db0d093f0dc1eb36b4b8ab3eb38078400ca03c1806165,demo-provenance/po.eml,inbox,69f48339900f92df5356884ee0b9568756d1960aebd3ad5de15af6f3553f0a94,<po@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81002 采购资料,"完全虚构的T08集成样本。
+文件日期未构成交期承诺。
+",text/plain,,demo-provenance/5a7fda15664fe56c714db0d093f0dc1eb36b4b8ab3eb38078400ca03c1806165.eml
+eb53497d3b0fb9761569536d11d69ee736c58bdeec17cdfd735d83a556ea15ed,demo-provenance/proto.eml,inbox,b39d608c04984dde4aa6412cf8231598805693a9f1654cb8ed6574512fabe73d,<proto@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,原型工程图资料,"完全虚构的T08集成样本。
+产品 GV40159F 对应原型 GVY0647-00。未获生产批准。
+",text/plain,,demo-provenance/eb53497d3b0fb9761569536d11d69ee736c58bdeec17cdfd735d83a556ea15ed.eml
+ef94d652e4d70b2ade65fb04a815edc5556284381eae222d4b250ea5301751cd,demo-provenance/q1.eml,inbox,eb84352503b766703eb96b060edde420ea005fcb534b70e59605fc804c3ff7cc,<q1@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,业务附件,"完全虚构的T08集成样本。
+附件供核对。
+",text/plain,,demo-provenance/ef94d652e4d70b2ade65fb04a815edc5556284381eae222d4b250ea5301751cd.eml
+e50474db285ffa261c0f422124d409e0e04a1ba87b26056d99fe7625fc124cf6,demo-provenance/q1_forward.eml,inbox,7d34f54b69bff12d09e59c5d98de2f9e12c59c4e49b6261605cf23283b1f99ca,<q1_forward@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,转发资料,"完全虚构的T08集成样本。
+原件转发。
+",text/plain,,demo-provenance/e50474db285ffa261c0f422124d409e0e04a1ba87b26056d99fe7625fc124cf6.eml
+e64041ecb3c63f4af92eea010542c58d06cf491da3454e87814a730b4ff0e883,demo-provenance/qa.eml,inbox,2ecc0891f86a7118d13cb4a92278a578da25bfb1cb2653f525356f86c40b1bf1,<qa@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81005 报价资料,"完全虚构的T08集成样本。
+无更新或审批关系。
+",text/plain,,demo-provenance/e64041ecb3c63f4af92eea010542c58d06cf491da3454e87814a730b4ff0e883.eml
+8ce9bac4a6522119488074839bde86a50fe584b04118da50c3704a6e5a02a9c9,demo-provenance/qb.eml,inbox,eb99dd928fcefa479ab9a4da95e5c77c97f7288e47e7cacc3f8c667f16a4ccb7,<qb@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81005 报价资料,"完全虚构的T08集成样本。
+另一来源，不代表替代。
+",text/plain,,demo-provenance/8ce9bac4a6522119488074839bde86a50fe584b04118da50c3704a6e5a02a9c9.eml
+cfa2dd7bd11ae1774dc33272ba19fb587fafe76672901464b3c6120d985b0d03,demo-provenance/rev1.eml,inbox,8188fe2405f33419021319ea91abde1f1809e5369ffd9a7a3572538226f3ca07,<rev1@t08.invalid>,"Fri, 06 Nov 2026 10:00:00 +0800",2026-11-06T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81004 图纸旧版重发,"完全虚构的T08集成样本。
+修订号不代表放行。
+",text/plain,,demo-provenance/cfa2dd7bd11ae1774dc33272ba19fb587fafe76672901464b3c6120d985b0d03.eml
+61b47d46d8c553ff7e8f5f499a8c8429cb0041d56681385dcae642ba1b951e55,demo-provenance/rev2.eml,inbox,feeb4306af98cef517f898217640a4cf8f1cace5e9c181ed122fd8e3c279e62c,<rev2@t08.invalid>,"Wed, 04 Nov 2026 10:00:00 +0800",2026-11-04T02:00:00+00:00,fictional-supplier@example.invalid,fictional-trader@example.invalid,ZZ81004 图纸,"完全虚构的T08集成样本。
+尚未批准生产。
+",text/plain,,demo-provenance/61b47d46d8c553ff7e8f5f499a8c8429cb0041d56681385dcae642ba1b951e55.eml

@@ -1,0 +1,133 @@
+{
+  "provenance_verified": [
+    {
+      "path": "data/archive/originals/32cff501b44fc2ad713b098ce2e58dc22f81aa6bcc0223ee5243a7e72d4ba445.eml",
+      "sha256": "9474114b3c4d53693575e5c27fb3c7a9b8ac6375a9b4f0929d949d95ef8b7c1f",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/4cef695cb24c0b0f45cb8fd023d0c13154c92bc35f59c3d214d85116ce863108.eml",
+      "sha256": "99841d654587dbe9809411e5e8acf560653aa366fb23dd9fb8712cec2281474a",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/5a7fda15664fe56c714db0d093f0dc1eb36b4b8ab3eb38078400ca03c1806165.eml",
+      "sha256": "69f48339900f92df5356884ee0b9568756d1960aebd3ad5de15af6f3553f0a94",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/61b47d46d8c553ff7e8f5f499a8c8429cb0041d56681385dcae642ba1b951e55.eml",
+      "sha256": "feeb4306af98cef517f898217640a4cf8f1cace5e9c181ed122fd8e3c279e62c",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/73b7beb6ed304e9f4bf03a60de57739aee477313be6f44d962c03026bcaf278a.eml",
+      "sha256": "869a3a489b7d94aebe72114730f8137c44c606d3ed91e0cc0200f1a1b85d2f7a",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/8ce9bac4a6522119488074839bde86a50fe584b04118da50c3704a6e5a02a9c9.eml",
+      "sha256": "eb99dd928fcefa479ab9a4da95e5c77c97f7288e47e7cacc3f8c667f16a4ccb7",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/cfa2dd7bd11ae1774dc33272ba19fb587fafe76672901464b3c6120d985b0d03.eml",
+      "sha256": "8188fe2405f33419021319ea91abde1f1809e5369ffd9a7a3572538226f3ca07",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/d18e13087cd83d8e91418f615b931b773f910beee2c397297c6901713b9a9845.eml",
+      "sha256": "3374e19d559fa247c7c3bde21ac33de250f050c2f58069bdedc599b14026c707",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/e50474db285ffa261c0f422124d409e0e04a1ba87b26056d99fe7625fc124cf6.eml",
+      "sha256": "7d34f54b69bff12d09e59c5d98de2f9e12c59c4e49b6261605cf23283b1f99ca",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/e64041ecb3c63f4af92eea010542c58d06cf491da3454e87814a730b4ff0e883.eml",
+      "sha256": "2ecc0891f86a7118d13cb4a92278a578da25bfb1cb2653f525356f86c40b1bf1",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/eb53497d3b0fb9761569536d11d69ee736c58bdeec17cdfd735d83a556ea15ed.eml",
+      "sha256": "b39d608c04984dde4aa6412cf8231598805693a9f1654cb8ed6574512fabe73d",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/ef94d652e4d70b2ade65fb04a815edc5556284381eae222d4b250ea5301751cd.eml",
+      "sha256": "eb84352503b766703eb96b060edde420ea005fcb534b70e59605fc804c3ff7cc",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/originals/f71525e195724e493cbb855a6120ce21bf784a3f16839732f5a9e959dc753a8b.eml",
+      "sha256": "41cd0a9aee6f1553e78cc9e181722920dba2d33f4b18d6e125a63862be885ab5",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/0281a0d5f43d3481704e97e1d225c65a385ac04f305c1f3fc49a273f732956ae",
+      "sha256": "0281a0d5f43d3481704e97e1d225c65a385ac04f305c1f3fc49a273f732956ae",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/09e686dca4c8d771fb2a86458b352f4c37f2cafe4562f7950bfec31030a35134",
+      "sha256": "09e686dca4c8d771fb2a86458b352f4c37f2cafe4562f7950bfec31030a35134",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/314f2d9e93082ed4b473d708552d95db860ae9223d336a97c941000bd6a9dd52",
+      "sha256": "314f2d9e93082ed4b473d708552d95db860ae9223d336a97c941000bd6a9dd52",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/3e65bf7250c1695aa621e471be545b3940e093dedcbdcdf5b44822510cb3639f",
+      "sha256": "3e65bf7250c1695aa621e471be545b3940e093dedcbdcdf5b44822510cb3639f",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/b5b650c69715c78fbe2968216bd98dfb92971b8498557020793af46abe93dec1",
+      "sha256": "b5b650c69715c78fbe2968216bd98dfb92971b8498557020793af46abe93dec1",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/c0bdb298f9f3deebf4f7b8e9511f1415bac869d10c224ba0e4575c3e27b13491",
+      "sha256": "c0bdb298f9f3deebf4f7b8e9511f1415bac869d10c224ba0e4575c3e27b13491",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/d4beafa1cb4427280ae2a83aba4d8fc75c5d63dda5f9474b50ae16398d4f152d",
+      "sha256": "d4beafa1cb4427280ae2a83aba4d8fc75c5d63dda5f9474b50ae16398d4f152d",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/eac35d117acf57af80d30ee0ac1f7e4e1efbab85e46f9e376e9d4a1ca4f030fa",
+      "sha256": "eac35d117acf57af80d30ee0ac1f7e4e1efbab85e46f9e376e9d4a1ca4f030fa",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/ec7958e70c38b4d1514e3471b60ae544d3052b00e9ec0c79c5276d3c74c34bf7",
+      "sha256": "ec7958e70c38b4d1514e3471b60ae544d3052b00e9ec0c79c5276d3c74c34bf7",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/f2cf2e31c2d2def20d510674a60ab25bd70423593baeec0450375429f29ea4fc",
+      "sha256": "f2cf2e31c2d2def20d510674a60ab25bd70423593baeec0450375429f29ea4fc",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/fa5e97c920daa5dd6123e2a601f55558c2977c17fb0fb1ffa285ec60d3aec95d",
+      "sha256": "fa5e97c920daa5dd6123e2a601f55558c2977c17fb0fb1ffa285ec60d3aec95d",
+      "provenance": "explicitly_fictional_T08"
+    },
+    {
+      "path": "data/archive/attachments/feb4a3d9e028829e8fbfde2a91ad4a288ecb60717050b9c9edc6348a1684e036",
+      "sha256": "feb4a3d9e028829e8fbfde2a91ad4a288ecb60717050b9c9edc6348a1684e036",
+      "provenance": "explicitly_fictional_T08"
+    }
+  ],
+  "credential_pattern_findings": [],
+  "original_readme_preserved": true,
+  "online_deployed": false,
+  "limitations": "Pattern scan plus fictional-source byte verification; no real project data directories included"
+}

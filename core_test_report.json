@@ -1,0 +1,32 @@
+{
+  "core_queries": [
+    {
+      "intent": "factory_quotes",
+      "product": "ZZ81001",
+      "status": "matched"
+    },
+    {
+      "intent": "material_purchase",
+      "product": "ZZ81002",
+      "status": "matched"
+    },
+    {
+      "intent": "engineering_versions",
+      "product": "GV82001",
+      "status": "audit_only"
+    },
+    {
+      "intent": "engineering_versions",
+      "product": "GV40159F",
+      "status": "matched"
+    },
+    {
+      "intent": "quote_documents",
+      "product": "ZZ89999",
+      "status": "not_found"
+    }
+  ],
+  "file_bytes_access": "passed",
+  "windows_database_path_leaks": [],
+  "online_deployed": false
+}

@@ -1,0 +1,25 @@
+From: fictional-supplier@example.invalid
+To: fictional-trader@example.invalid
+Subject: ZZ81007 =?utf-8?b?6YeH6LSt6LWE5paZ?=
+Date: Wed, 04 Nov 2026 10:00:00 +0800
+Message-ID: <bad@t08.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============0005126177749003980=="
+
+--===============0005126177749003980==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+完全虚构的T08集成样本。
+无法解析的模拟附件。
+
+--===============0005126177749003980==
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''ZZ81007_%E9%87%87%E8%B4%AD%E5%8D%95.xlsx
+MIME-Version: 1.0
+
+RklDVElPTkFMIGRlbGliZXJhdGVseSBjb3JydXB0IHhsc3g=
+
+--===============0005126177749003980==--
