@@ -1,0 +1,30 @@
+{
+  "initial": [
+    [
+      "ZZ81001",
+      "order_confirmation"
+    ],
+    [
+      "ZZ81002",
+      "delivery_confirmation"
+    ],
+    [
+      "ZZ81004",
+      "drawing_confirmation"
+    ]
+  ],
+  "after_new_same_keys": true,
+  "delivery_values": [
+    "2026-11-10",
+    "2026-11-14"
+  ],
+  "done_task_preserved": true,
+  "forbidden_claims": [
+    "order_obtained",
+    "material_arrived",
+    "drawing_approved"
+  ],
+  "expected_false_positives": 0,
+  "expected_omissions": 0,
+  "expected_duplicates": 0
+}

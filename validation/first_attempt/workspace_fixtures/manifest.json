@@ -1,0 +1,32 @@
+[
+  {
+    "file": "a_quote.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-01",
+    "sha256": "4545046118ed0c8692d7f94e19ae993db02b79a8693bcf418f73ee040c893548"
+  },
+  {
+    "file": "b_date.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-01",
+    "sha256": "c2c72474b535e4be177ec418fc9d4be6646ccbd58296c72b2b9a7b2bcf9a3fdc"
+  },
+  {
+    "file": "c_review.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-02",
+    "sha256": "029191e63bdbf6c242d54aa41b790183f8d37413ce5286d5ab81245087f7c1f2"
+  },
+  {
+    "file": "b_date_new.eml",
+    "stage": 1,
+    "simulation_date": "2026-11-04",
+    "sha256": "6be3c1d5706d257a820e6dca2201bdb7174c983d6f83f63f64acf8df70076d5d"
+  },
+  {
+    "file": "a_quote_forward.eml",
+    "stage": 1,
+    "simulation_date": "2026-11-04",
+    "sha256": "971c0ba9c555b5fa9aa23934e3cf7198998fa43f70ead42cba119ce76d105b2e"
+  }
+]

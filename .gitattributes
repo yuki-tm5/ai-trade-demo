@@ -1,2 +1,4 @@
 * text=auto eol=lf
 data/** -text
+workspace_fixtures/** -text
+validation/** -text

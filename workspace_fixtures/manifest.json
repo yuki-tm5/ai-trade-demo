@@ -1,0 +1,32 @@
+[
+  {
+    "file": "a_quote.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-01",
+    "sha256": "fb4e2b458c3110af7fd44f45aaa2a1c6a9d650cca2801e57dc007a5a138ace7d"
+  },
+  {
+    "file": "b_date.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-01",
+    "sha256": "f4ea25f69895d2bab1c86e59e1592c74a2de7f8d04ff578e0b0bf88ba54e3b5c"
+  },
+  {
+    "file": "c_review.eml",
+    "stage": 0,
+    "simulation_date": "2026-11-02",
+    "sha256": "fe578b826900ce853b0c63dc02f789f0fd11b9f5e4a4e20c5c80414c1e4b19fb"
+  },
+  {
+    "file": "b_date_new.eml",
+    "stage": 1,
+    "simulation_date": "2026-11-04",
+    "sha256": "c4f9f997272fc1af52508831b9757ef16332a81b0c5abdbf57245b8f28092f7f"
+  },
+  {
+    "file": "a_quote_forward.eml",
+    "stage": 1,
+    "simulation_date": "2026-11-04",
+    "sha256": "f3865ba307fe30fb185481072080142e5c68f291c0f215b193d562d832266a44"
+  }
+]
