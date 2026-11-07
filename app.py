@@ -32,6 +32,17 @@ if configured:
     except BackendError as e:st.error(str(e))
   st.info('登录后使用数据库持久化个人任务；未登录只能查看虚构预览。')
 else:st.warning('数据库尚未授权配置：当前为只读预览，任务写入与模拟更新已禁用。请按 deployment/SETUP.md 配置 Supabase 后再开展真实用户任务测试。')
+if configured:
+ with st.sidebar.expander('连接诊断（不登录、不写入）'):
+  from urllib.parse import urlsplit
+  st.caption('项目主机：'+str(urlsplit(credentials[0]).hostname))
+  import os
+  key_name='SUPABASE_PUBLISHABLE_KEY' if settings.get('SUPABASE_PUBLISHABLE_KEY') or os.environ.get('SUPABASE_PUBLISHABLE_KEY') else 'SUPABASE_ANON_KEY（兼容）'
+  st.caption('读取变量：'+key_name+'；key值不显示')
+  if st.button('检查Supabase Auth连接'):
+   try:
+    diagnostic=Store(*credentials).health();st.success('Auth HTTPS可达，HTTP '+str(diagnostic['http_status'])+'。尚未验证用户登录、任务写入或RLS。')
+   except BackendError as e:st.error(str(e))
 if st.sidebar.button('Morning Workspace'):st.session_state['page']='workspace';st.rerun()
 if st.sidebar.button('Ask & Find'):st.session_state['page']='find';st.rerun()
 page=st.session_state.get('page','workspace')

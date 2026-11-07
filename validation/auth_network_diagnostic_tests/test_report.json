@@ -1,0 +1,76 @@
+{
+  "passed": 17,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "invalid_request_header_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "tls_failure_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "proxy_failure_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "connect_timeout_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "read_timeout_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "dns_failure_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "connection_failure_classified_and_redacted",
+      "passed": true
+    },
+    {
+      "name": "http_400_retains_status_no_body_leak",
+      "passed": true
+    },
+    {
+      "name": "http_401_retains_status_no_body_leak",
+      "passed": true
+    },
+    {
+      "name": "http_403_retains_status_no_body_leak",
+      "passed": true
+    },
+    {
+      "name": "http_500_retains_status_no_body_leak",
+      "passed": true
+    },
+    {
+      "name": "newline_key_rejected_before_network",
+      "passed": true
+    },
+    {
+      "name": "correct_auth_endpoint_and_post",
+      "passed": true
+    },
+    {
+      "name": "publishable_header_not_bearer",
+      "passed": true
+    },
+    {
+      "name": "rls_requests_use_user_jwt",
+      "passed": true
+    },
+    {
+      "name": "tls_not_disabled_and_redirects_not_forwarded",
+      "passed": true
+    },
+    {
+      "name": "server_logs_never_contain_credentials",
+      "passed": true
+    }
+  ],
+  "live_cloud_root_cause": "Pending real cloud diagnostic; local no-key Auth request returned HTTP401, not a password conclusion",
+  "live_login_task_persistence_verified": false
+}

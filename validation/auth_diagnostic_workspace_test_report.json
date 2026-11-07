@@ -1,0 +1,113 @@
+{
+  "passed": 24,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "exact_expected_initial_reminders",
+      "passed": true
+    },
+    {
+      "name": "every_event_has_original_evidence",
+      "passed": true
+    },
+    {
+      "name": "repeat_mail_no_duplicate_or_state_reset",
+      "passed": true
+    },
+    {
+      "name": "done_survives_new_mail",
+      "passed": true
+    },
+    {
+      "name": "task_completion_does_not_confirm_business",
+      "passed": true
+    },
+    {
+      "name": "date_conflict_retains_both_sources",
+      "passed": true
+    },
+    {
+      "name": "same_project_new_mail_updates_item_not_duplicate",
+      "passed": true
+    },
+    {
+      "name": "similar_projects_not_merged",
+      "passed": true
+    },
+    {
+      "name": "undo_preserves_new_evidence",
+      "passed": true
+    },
+    {
+      "name": "dismiss_and_undo",
+      "passed": true
+    },
+    {
+      "name": "manual_task_stays_distinct",
+      "passed": true
+    },
+    {
+      "name": "user_history_and_source_preserved",
+      "passed": true
+    },
+    {
+      "name": "no_unfounded_business_states",
+      "passed": true
+    },
+    {
+      "name": "store_reconnect_retains_state_mock",
+      "passed": true
+    },
+    {
+      "name": "two_owners_isolated_mock",
+      "passed": true
+    },
+    {
+      "name": "other_owner_read_denied_mock",
+      "passed": true
+    },
+    {
+      "name": "stale_version_cannot_overwrite",
+      "passed": true
+    },
+    {
+      "name": "publishable_key_not_used_as_user_bearer",
+      "passed": true
+    },
+    {
+      "name": "privileged_key_rejected",
+      "passed": true
+    },
+    {
+      "name": "workspace_default_page_renders",
+      "passed": true
+    },
+    {
+      "name": "writes_disabled_without_secrets",
+      "passed": true
+    },
+    {
+      "name": "find_page_renders",
+      "passed": true
+    },
+    {
+      "name": "find_search_and_download",
+      "passed": true
+    },
+    {
+      "name": "no_raw_json_user_interface",
+      "passed": true
+    }
+  ],
+  "reminder_accuracy": {
+    "expected": 3,
+    "correct": 3,
+    "omitted": 0,
+    "false_positive": 0,
+    "duplicate": 0,
+    "unfounded_state_judgments": 0
+  },
+  "live_supabase_persistence_verified": false,
+  "live_two_user_RLS_verified": false,
+  "cloud_reboot_persistence_verified": false
+}
