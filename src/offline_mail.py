@@ -80,7 +80,7 @@ def parse(raw):
               str(msg.get('In-Reply-To', '')))
     return fields, files, issues
 
-def import_emails(input_dir, output_dir):
+def import_emails(input_dir, output_dir, *, relative_identity=False):
     root, out = Path(input_dir).resolve(), Path(output_dir).resolve()
     for folder in ('inbox', 'sent'):
         if not (root / 'emails' / folder).is_dir():
@@ -98,7 +98,7 @@ def import_emails(input_dir, output_dir):
                 if not path.is_file() or path.suffix.lower() != '.eml':
                     continue
                 scanned += 1
-                source = str(path.resolve())
+                source = path.relative_to(root).as_posix() if relative_identity else str(path.resolve())
                 try:
                     if not path.resolve().is_relative_to(root):
                         raise ValueError('SourceOutsideInput')

@@ -1,10 +1,22 @@
 from pathlib import Path
 import sys,json,logging,uuid
+from tempfile import TemporaryDirectory
 import streamlit as st
 ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT/'src'))
 from ask_find import ask,config,resolve_file
 from workspace_ops import initial,parse_events,ingest,change
+from workspace_increment import build_snapshot
 from workspace_store import Store,BackendError,Conflict,public_config
+@st.cache_resource
+def incremental_snapshot():
+    storage = TemporaryDirectory(prefix='trade-demo-')
+    try:
+        path, events = build_snapshot(ROOT, Path(storage.name))
+    except Exception:
+        storage.cleanup()
+        raise
+    return storage, path, events
+
 st.set_page_config(page_title='AI Trade · Operations Workspace',layout='wide')
 st.title('AI Trade Operations · 规则检索 Demo')
 st.caption('Demo Data · 完全虚构 · 无真实QQ/微信连接 · 无AI语义理解')
@@ -13,16 +25,32 @@ except Exception:settings={}
 try:credentials=public_config(settings)
 except BackendError as e:st.error(str(e));credentials=None
 configured=credentials is not None
-store=None;can_write=False;version=0;state=ingest(initial(),parse_events(ROOT/'workspace_fixtures',0))
+search_config=ROOT/'config.json';store=None;can_write=False;version=0;state=ingest(initial(),parse_events(ROOT/'workspace_fixtures',0))
 if configured:
  if st.session_state.get('access_token'):
   st.session_state.pop('login_password',None)
   store=Store(*credentials,token=st.session_state['access_token'])
   try:
-   version,state=store.load();seeded=ingest(state,parse_events(ROOT/'workspace_fixtures',state['simulation_stage']))
+   version,state=store.load()
+   pending_config=search_config
+   events=parse_events(ROOT/'workspace_fixtures',state['simulation_stage'])
+   if state['simulation_stage']>=1:
+    try:_,pending_config,new_events=incremental_snapshot()
+    except Exception as exc:
+     logging.getLogger('ai_trade.demo').error('snapshot_rebuild_failed type=%s',type(exc).__name__)
+     if st.sidebar.button('退出测试者登录'):st.session_state.clear();st.rerun()
+     st.error('模拟资料索引暂不可用。已保存任务保留，请重试。')
+     st.stop()
+    events+=new_events
+   seeded=ingest(state,events)
    if seeded!=state:version=store.save(version,seeded);state=seeded
+   search_config=pending_config
    can_write=True
-  except (BackendError,Conflict) as e:st.error(str(e));st.warning('任务保存不可用；当前只读，未假装保存。')
+  except (BackendError,Conflict) as e:
+   st.error(str(e));st.warning('任务保存不可用；当前只读，未假装保存。')
+   if state['simulation_stage']>=1:
+    if st.sidebar.button('退出测试者登录'):st.session_state.clear();st.rerun()
+    st.stop()
   if st.sidebar.button('退出测试者登录'):st.session_state.clear();st.rerun()
  else:
   with st.sidebar.form('login'):
@@ -60,7 +88,7 @@ def save_action(action,**kwargs):
 def evidence(event):
  st.caption('Demo Data · 模拟日期 '+event['simulation_date']+' · '+event['confirmation_status'])
  st.write('来源邮件：'+event['source_email_id']);st.write('主题：'+event['subject']);st.write('邮件事件时间：'+event['event_time']);st.code(event['evidence'],language=None)
- st.download_button('下载模拟来源邮件',(ROOT/'workspace_fixtures'/event['source_file']).read_bytes(),file_name=event['source_file'],key='eml_'+event['id']+'_'+str(st.session_state.get('evidence_count',0)))
+ st.download_button('下载模拟来源邮件',((ROOT/'workspace_increment' if event['source_file']=='quote_increment.eml' else ROOT/'workspace_fixtures')/event['source_file']).read_bytes(),file_name=event['source_file'],key='eml_'+event['id']+'_'+str(st.session_state.get('evidence_count',0)))
  st.session_state['evidence_count']=st.session_state.get('evidence_count',0)+1
 if page=='workspace':
  st.header('Morning Workspace')
@@ -70,7 +98,13 @@ if page=='workspace':
  st.caption('任务完成只表示用户工作进展，不代表材料到货、订单确认或图纸获批。')
  if st.button('模拟收到新邮件 · Demo 日期 2026-11-04',disabled=not can_write or state['simulation_stage']>=1):
   try:
-   updated=ingest(state,parse_events(ROOT/'workspace_fixtures',1));updated['simulation_stage']=1;store.save(version,updated);st.rerun()
+   try:_,_,new_events=incremental_snapshot()
+   except Exception as exc:
+    logging.getLogger('ai_trade.demo').error('snapshot_build_failed type=%s',type(exc).__name__)
+    st.error('模拟资料构建失败，继续使用原有资料和任务。')
+    new_events=None
+   if new_events is not None:
+    updated=ingest(state,parse_events(ROOT/'workspace_fixtures',1)+new_events);updated['simulation_stage']=1;store.save(version,updated);st.rerun()
   except (BackendError,Conflict) as e:st.error(str(e))
  st.subheader('Needs Your Attention · 项目事项')
  projects=sorted({t['project'] for t in tasks})
@@ -117,9 +151,9 @@ else:
   if st.form_submit_button('查询'):
    q=dict(intent=labels[intent],product_id=product,dataset='supplementary')
    if number:q['document_number']=number
-   st.session_state['result']=ask(ROOT/'config.json',q)
- if 'result' in st.session_state:
-  r=st.session_state['result'];st.write('查询状态：'+r['query_status'])
+   st.session_state['result']=(str(search_config),ask(search_config,q))
+ if isinstance(st.session_state.get('result'),tuple) and st.session_state['result'][0]==str(search_config):
+  r=st.session_state['result'][1];st.write('查询状态：'+r['query_status'])
   for bucket,title in [('documents','正常候选'),('uncertain_documents','待确认'),('audit_documents','审计证据（不推荐）')]:
    st.subheader(title)
    for i,d in enumerate(r[bucket]):
@@ -133,8 +167,8 @@ else:
        st.write(s['subject']);st.caption(s['email_id']+' · '+s['date_raw']);st.write('发件人：'+s['sender'])
        from email.parser import BytesParser
        from email import policy
-       ep=ROOT/'data/archive/originals'/Path(s['archived_email_path']).name
+       ep=search_config.parent/config(search_config)['datasets'][d['file_reference']['dataset']]['archive_root']/'originals'/Path(s['archived_email_path']).name
        if ep.is_file():
         m=BytesParser(policy=policy.default).parsebytes(ep.read_bytes());body=m.get_body(preferencelist=('plain',));st.code(body.get_content() if body else '无纯文本正文',language=None)
-     p=resolve_file(config(ROOT/'config.json'),d['file_reference']);st.download_button('下载原始附件',p.read_bytes(),file_name=d['filenames'][0],key=bucket+str(i))
+     p=resolve_file(config(search_config),d['file_reference']);st.download_button('下载原始附件',p.read_bytes(),file_name=d['filenames'][0],key=bucket+str(i))
   st.caption('报价不代表订单；记录日期不代表承诺交期；未找到索引证据不代表业务未发生。')
