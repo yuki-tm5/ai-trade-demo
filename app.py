@@ -1,5 +1,5 @@
 from pathlib import Path
-import sys,json
+import sys,json,logging,uuid
 import streamlit as st
 ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT/'src'))
 from ask_find import ask,config,resolve_file
@@ -41,8 +41,16 @@ if configured:
   st.caption('读取变量：'+key_name+'；key值不显示')
   if st.button('检查Supabase Auth连接'):
    try:
-    diagnostic=Store(*credentials).health();st.success('Auth HTTPS可达，HTTP '+str(diagnostic['http_status'])+'。尚未验证用户登录、任务写入或RLS。')
-   except BackendError as e:st.error(str(e))
+    diagnostic=Store(*credentials).health()
+    st.success(f"Auth HTTPS 可达，HTTP {diagnostic['http_status']}。用户登录、写入和 RLS 待验证。")
+   except BackendError as exc:
+    st.error(str(exc))
+   except Exception as exc:
+    reference=uuid.uuid4().hex[:12]
+    logging.getLogger('ai_trade.supabase').error(
+        'supabase_diagnostic reference=%s category=internal_error operation=auth_health exception_type=%s',
+        reference,type(exc).__name__)
+    st.error(f'应用内部诊断异常（{type(exc).__name__}）。诊断编号 {reference}。')
 if st.sidebar.button('Morning Workspace'):st.session_state['page']='workspace';st.rerun()
 if st.sidebar.button('Ask & Find'):st.session_state['page']='find';st.rerun()
 page=st.session_state.get('page','workspace')

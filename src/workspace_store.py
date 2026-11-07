@@ -37,7 +37,7 @@ class Store:
   description=DETAILS.get(code) or labels.get(category,'Supabase请求异常')
   suffix=('；HTTP '+str(status)) if status is not None else '；未取得HTTP响应'
   raise BackendError(description+suffix+'；诊断编号 '+reference+'。请勿重复提交写入，刷新核对。',status,diagnostic) from None
- def request(self,method,path,**kwargs):
+ def request(self,method,path,*,return_status=False,**kwargs):
   headers={'apikey':self.key,'Content-Type':'application/json'}
   if path.startswith('/rest/'):headers['Prefer']='return=representation'
   if self.token:headers['Authorization']='Bearer '+self.token
@@ -53,21 +53,20 @@ class Store:
    elif isinstance(exc,requests.exceptions.ConnectionError):kind='connection_failure'
    else:kind='connection_failure'
    self.failure(kind,method,path,types=types)
-  self.last_http_status=r.status_code
   if 300<=r.status_code<400:self.failure('redirect_rejected',method,path,status=r.status_code)
   if not r.ok:
    try:payload=r.json()
    except ValueError:payload={}
    code=payload.get('error_code') or payload.get('code') if isinstance(payload,dict) else None
    if not code and isinstance(payload,dict) and payload.get('message')=='Invalid API key':code='invalid_api_key'
-   if code not in {'invalid_credentials','email_not_confirmed','invalid_api_key','invalid_jwt','42501','PGRST205','23505','PGRST116','over_request_rate_limit','user_banned','unexpected_failure','request_timeout','validation_failed','bad_jwt','no_authorization','email_address_invalid','captcha_failed','signup_disabled'}:code='unclassified'
+   if not isinstance(code,str) or code not in {'invalid_credentials','email_not_confirmed','invalid_api_key','invalid_jwt','42501','PGRST205','23505','PGRST116','over_request_rate_limit','user_banned','unexpected_failure','request_timeout','validation_failed','bad_jwt','no_authorization','email_address_invalid','captcha_failed','signup_disabled'}:code='unclassified'
    self.failure('http_error',method,path,status=r.status_code,code=code)
-  if not r.content:return None
-  try:return r.json()
+  try:payload=r.json() if r.content else None
   except ValueError:self.failure('invalid_response',method,path,status=r.status_code)
+  return (r.status_code,payload) if return_status else payload
  def health(self):
-  self.request('GET','/auth/v1/health')
-  return dict(reachable=True,http_status=self.last_http_status,service='Supabase Auth',user_authenticated=False,database_write_tested=False)
+  status,_=self.request('GET','/auth/v1/health',return_status=True)
+  return dict(reachable=True,http_status=status,service='Supabase Auth',user_authenticated=False,database_write_tested=False)
  def login(self,email,password):
   r=self.request('POST','/auth/v1/token?grant_type=password',json={'email':email,'password':password});self.token=r['access_token'];return self.token
  def user(self):return self.request('GET','/auth/v1/user')['id']
